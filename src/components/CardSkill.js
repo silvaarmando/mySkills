@@ -1,20 +1,22 @@
 import React from 'react';
 import {
   TouchableOpacity,
-  Text
+  Text,
+  StyleSheet
 } from 'react-native';
 
-export function CardSkill() {
-  <TouchableOpacity
-    key={1}
-    style={styles.buttonSkill}
-  >
-    <Text
-      style={styles.textSkill}
+export function CardSkill({ skill }) {
+  return (
+    <TouchableOpacity
+      style={styles.buttonSkill}
     >
-      skill
-    </Text>
-  </TouchableOpacity>;
+      <Text
+        style={styles.textSkill}
+      >
+        { skill }
+      </Text>
+    </TouchableOpacity>
+  )
 }
 
 const styles = StyleSheet.create({

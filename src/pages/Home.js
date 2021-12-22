@@ -44,6 +44,7 @@ export function Home() {
       />
 
       <Button
+        onPress={handleAddNewSkill}
       />
 
       <Text
@@ -58,7 +59,10 @@ export function Home() {
 
       {
         mySkills.map(skill => (
-            <CardSkill />
+            <CardSkill
+              key={skill}
+              skill={skill}
+            />
           )
         )
       }
