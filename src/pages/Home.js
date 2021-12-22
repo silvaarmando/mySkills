@@ -27,7 +27,7 @@ export function Home() {
 
   function handleAddNewSkill() {
     setMySkills([
-        mySkills,
+        ...mySkills,
         newSkill
       ])
   }
