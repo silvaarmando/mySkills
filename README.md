@@ -22,7 +22,7 @@
 >
   <p
   >
-    SUMMARY
+    <strong>SUMMARY</strong>
   </p>
   <a
     href="#TECHNOLOGIES"
@@ -386,4 +386,29 @@
     style="border-radius: 0.5em"
     src="./screens-readme/gif-stylesheet.webp">
 </h3>
+
+<br
+/>
+
+## COMPONENTS
+
+<br
+/>
+
+## HOOKS
+
+<br
+/>
+
+## TYPESCRIPT
+
+<br
+/>
+
+## DEBUG
+
+<br
+/>
+
+## RUNNING IN YOUR MACHINE
 

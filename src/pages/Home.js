@@ -10,10 +10,14 @@ import {
   TextInput,
   StyleSheet,
   Platform,
-  TouchableOpacity
+  FlatList,
 } from 'react-native';
-import { Button } from '../components/Button';
-import { CardSkill } from '../components/CardSkill';
+import {
+  Button
+} from '../components/Button';
+import {
+  CardSkill
+} from '../components/CardSkill';
 
 export function Home() {
   const [
@@ -43,9 +47,7 @@ export function Home() {
         onChangeText={setNewSkill}
       />
 
-      <Button
-        onPress={handleAddNewSkill}
-      />
+      <Button onPress={handleAddNewSkill} />
 
       <Text
         style={[
@@ -57,15 +59,16 @@ export function Home() {
         My Skills
       </Text>
 
-      {
-        mySkills.map(skill => (
-            <CardSkill
-              key={skill}
-              skill={skill}
-            />
-          )
-        )
-      }
+      <FlatList
+        data={mySkills}
+        keyExtractor={item => item}
+        showsVerticalScrollIndicator={false}
+        renderItem={({item}) =>
+          <CardSkill
+            skill={item}
+          />
+        }
+      />
     </View>
   );
 }
