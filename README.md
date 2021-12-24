@@ -22,7 +22,10 @@
 >
   <p
   >
-    <strong>SUMMARY</strong>
+    <strong
+    >
+      SUMMARY
+    </strong>
   </p>
   <a
     href="#TECHNOLOGIES"
@@ -411,4 +414,3 @@
 />
 
 ## RUNNING IN YOUR MACHINE
-
