@@ -24,16 +24,23 @@ export function Home() {
     newSkill,
     setNewSkill
   ] = useState('')
+
   const [
     mySkills,
     setMySkills
   ] = useState([])
+
+  let stateNewSkill = 'Armando'
 
   function handleAddNewSkill() {
     setMySkills([
         ...mySkills,
         newSkill
       ])
+  }
+
+  function handleUpdateSkill(text) {
+    stateNewSkill = text;
   }
 
   return (
@@ -44,7 +51,7 @@ export function Home() {
         style={styles.input}
         placeholder="New skill"
         placeholderTextColor="#555"
-        onChangeText={setNewSkill}
+        onChangeText={text => handleUpdateSkill(textmm)}
       />
 
       <Button onPress={handleAddNewSkill} />
