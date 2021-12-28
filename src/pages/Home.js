@@ -12,7 +12,6 @@ import {
   StyleSheet,
   Platform,
   FlatList,
-  StatusBar,
 } from 'react-native';
 import {
   Button
@@ -55,7 +54,6 @@ export function Home() {
 
   return (
     <View style={styles.container}>
-      <StatusBar barStyle='light-content'/>
       <Text style={styles.title}>Welcome Armando</Text>
 
       <TextInput
