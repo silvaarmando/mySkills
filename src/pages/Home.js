@@ -2,6 +2,7 @@ import
   React,
   {
     useState,
+    useEffect,
   }
 from 'react';
 import {
@@ -30,18 +31,26 @@ export function Home() {
     setMySkills
   ] = useState([])
 
-  let stateNewSkill = 'Armando'
+  const [greeting, setGreeting] = useState('')
 
   function handleAddNewSkill() {
-    setMySkills([
-        ...mySkills,
+    setMySkills(oldState => [
+        ...oldState,
         newSkill
       ])
   }
 
-  function handleUpdateSkill(text) {
-    stateNewSkill = text;
-  }
+  useEffect(() => {
+    const currentHour = new Date().getHours();
+
+    if (currentHour < 12) {
+      setGreeting('Good morning')
+    } else if (currentHour >= 12 && currentHour < 18) {
+      setGreeting('Good afternoon')
+    } else {
+      setGreeting('Good night')
+    }
+  }, [])
 
   return (
     <View style={styles.container}>
@@ -51,7 +60,7 @@ export function Home() {
         style={styles.input}
         placeholder="New skill"
         placeholderTextColor="#555"
-        onChangeText={text => handleUpdateSkill(textmm)}
+        // onChangeText={text => handleUpdateSkill(text)}
       />
 
       <Button onPress={handleAddNewSkill} />
@@ -69,12 +78,11 @@ export function Home() {
       <FlatList
         data={mySkills}
         keyExtractor={item => item}
-        showsVerticalScrollIndicator={false}
-        renderItem={({item}) =>
+        renderItem={({item}) => (
           <CardSkill
             skill={item}
           />
-        }
+        )}
       />
     </View>
   );

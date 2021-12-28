@@ -14,7 +14,7 @@ export function Button({ onPress }) {
     >
       <Text
         style={styles.buttonText}
-        // onPress={handleAddNewSkill}
+        onPress={onPress}
       >
         Add
       </Text>
