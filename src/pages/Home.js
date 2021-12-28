@@ -60,7 +60,7 @@ export function Home() {
         style={styles.input}
         placeholder="New skill"
         placeholderTextColor="#555"
-        // onChangeText={text => handleUpdateSkill(text)}
+        onChangeText={setNewSkill}
       />
 
       <Button onPress={handleAddNewSkill} />
