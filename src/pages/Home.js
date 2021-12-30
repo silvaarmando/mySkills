@@ -79,9 +79,7 @@ export function Home() {
         data={mySkills}
         keyExtractor={item => item}
         renderItem={({item}) => (
-          <CardSkillgit remote add origin https://github.com/franciscoarmando63/login-student.git
-git branch -M main
-git push -u origin main 
+          <CardSkill
             skill={item}
           />
         )}
