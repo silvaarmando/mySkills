@@ -48,8 +48,8 @@ export function Home() {
     }
 
     setMySkills(oldState => [
-      ...mySkills,
-      newSkill,
+      ...oldState,
+      newSkill
     ])
   }
 
@@ -76,7 +76,11 @@ export function Home() {
         onChangeText={setNewSkill}
       />
 
-      <Button onPress={handleAddNewSkill} />
+      <Button
+        onPress={handleAddNewSkill}
+        title="Add"
+        activeOpacity={0.7}
+      />
 
       <Text
         style={[
