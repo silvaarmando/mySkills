@@ -20,7 +20,7 @@ import {
   CardSkill
 } from '../components/CardSkill';
 
-interface SkillData {
+interface DataSkill {
   id: string;
   name: string;
 }
@@ -34,7 +34,7 @@ export function Home() {
   const [
     mySkills,
     setMySkills
-  ] = useState<SkillData[]>([])
+  ] = useState<DataSkill[]>([])
 
   const [
     greeting,
@@ -47,9 +47,9 @@ export function Home() {
       name: newSkill,
     }
 
-    setMySkills(oldState => [
-      ...oldState,
-      newSkill
+    setMySkills([
+      ...mySkills,
+      data
     ])
   }
 
