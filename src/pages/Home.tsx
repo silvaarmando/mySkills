@@ -47,6 +47,8 @@ export function Home() {
       name: newSkill,
     }
 
+    console.log("new skill: ", data)
+
     setMySkills([
       ...mySkills,
       data
